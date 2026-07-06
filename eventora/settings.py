@@ -140,7 +140,7 @@ SIMPLE_JWT = {
 # ── CORS ──────────────────────────────────────────────────────
 CORS_ALLOWED_ORIGINS = os.environ.get(
     'CORS_ALLOWED_ORIGINS',
-    'http://localhost:3000,https://eventora-frontend-red.vercel.app'
+    'http://localhost:3000,https://eventora-frontend-red.vercel.app,https://eventora-frontend-git-main-islemotlms-projects.vercel.app'
 ).split(',')
 
 # ── Email ─────────────────────────────────────────────────────
