@@ -10,7 +10,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'dev-secret-key-change-in-production')
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = os.environ.get(
+    'ALLOWED_HOSTS',
+    'localhost,127.0.0.1,.onrender.com'
+).split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -136,9 +139,9 @@ SIMPLE_JWT = {
 
 # ── CORS ──────────────────────────────────────────────────────
 CORS_ALLOWED_ORIGINS = os.environ.get(
-    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000'
+    'CORS_ALLOWED_ORIGINS',
+    'http://localhost:3000,https://eventora-frontend-red.vercel.app'
 ).split(',')
-CORS_ALLOW_CREDENTIALS = True
 
 # ── Email ─────────────────────────────────────────────────────
 _EMAIL_MODE = os.environ.get('EMAIL_MODE', 'console')
