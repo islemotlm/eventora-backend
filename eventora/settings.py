@@ -149,10 +149,13 @@ CORS_ALLOW_HEADERS = [
     "origin",
     "user-agent",
 ]
-CORS_ALLOWED_ORIGINS = os.environ.get(
-    'CORS_ALLOWED_ORIGINS',
-    'http://localhost:3000,https://eventora-frontend-red.vercel.app,https://eventora-frontend-git-main-islemotlms-projects.vercel.app'
-).split(',')
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "https://eventora-frontend-red.vercel.app",
+    "https://eventora-frontend-git-main-islemotlms-projects.vercel.app",
+]
+
+CORS_ALLOW_CREDENTIALS = True
 
 # ── Email ─────────────────────────────────────────────────────
 _EMAIL_MODE = os.environ.get('EMAIL_MODE', 'console')
@@ -169,6 +172,12 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'noreply@eventora.com')
 
 CSRF_TRUSTED_ORIGINS = [
+    "https://eventora-backend-azu7.onrender.com",
     "https://eventora-frontend-git-main-islemotlms-projects.vercel.app",
     "https://eventora-frontend-red.vercel.app",
+]
+ALLOWED_HOSTS = [
+    "eventora-backend-azu7.onrender.com",
+    "localhost",
+    "127.0.0.1",
 ]
