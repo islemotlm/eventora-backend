@@ -1,0 +1,10 @@
+Django>=4.2.16,<4.3
+djangorestframework>=3.15.2
+djangorestframework-simplejwt>=5.3.1
+django-cors-headers>=4.4.0
+Pillow>=11.1.0
+qrcode>=8.0
+reportlab>=4.2.5
+python-dotenv>=1.0.1
+django-filter>=24.3
+drf-nested-routers>=0.93.5

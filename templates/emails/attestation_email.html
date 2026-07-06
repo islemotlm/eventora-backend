@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your attestation is ready</title>
+</head>
+<body style="margin:0;padding:0;background-color:#F0EDFF;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#F0EDFF;padding:32px 16px;">
+    <tr>
+      <td align="center">
+
+        <!-- Card -->
+        <table width="580" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border-radius:20px;overflow:hidden;box-shadow:0 4px 24px rgba(108,71,255,0.10);max-width:580px;width:100%;">
+
+          <!-- Top header -->
+          <tr>
+            <td style="padding:24px 32px 20px 32px;border-bottom:1px solid #F3F4F6;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td>
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td style="width:32px;height:32px;background:linear-gradient(135deg,#6C47FF,#8B5CF6);border-radius:50%;text-align:center;vertical-align:middle;">
+                          <span style="color:white;font-size:16px;line-height:32px;">&#9673;</span>
+                        </td>
+                        <td style="padding-left:10px;">
+                          <span style="font-weight:800;font-size:16px;color:#111827;letter-spacing:-0.01em;">Eventora</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td align="right">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="1.5" style="display:inline-block;vertical-align:middle;">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                      <polyline points="9 12 11 14 15 10" stroke="#9CA3AF"/>
+                    </svg>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding:32px 32px 8px 32px;">
+              <h1 style="margin:0 0 12px 0;font-size:26px;font-weight:900;color:#111827;line-height:1.2;">Your attestation is ready</h1>
+              <p style="margin:0;font-size:15px;color:#374151;line-height:1.6;max-width:420px;">
+                Congratulations! You have successfully completed the requirements for your event participation.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Info table -->
+          <tr>
+            <td style="padding:24px 32px;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #E5E7EB;border-radius:12px;overflow:hidden;">
+                <tr>
+                  <td style="padding:14px 20px;border-bottom:1px solid #E5E7EB;background:#FAFAFA;width:120px;">
+                    <span style="font-size:11px;font-weight:700;color:#9CA3AF;letter-spacing:0.08em;text-transform:uppercase;">Participant</span>
+                  </td>
+                  <td style="padding:14px 20px;border-bottom:1px solid #E5E7EB;border-left:1px solid #E5E7EB;">
+                    <span style="font-size:15px;font-weight:600;color:#111827;">{{ participant.first_name }} {{ participant.last_name }}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:14px 20px;background:#FAFAFA;width:120px;">
+                    <span style="font-size:11px;font-weight:700;color:#9CA3AF;letter-spacing:0.08em;text-transform:uppercase;">Event</span>
+                  </td>
+                  <td style="padding:14px 20px;border-left:1px solid #E5E7EB;">
+                    <span style="font-size:15px;font-weight:600;color:#111827;">{{ event.title }}</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Description -->
+          <tr>
+            <td style="padding:0 32px 28px 32px;">
+              <p style="margin:0;font-size:15px;color:#374151;line-height:1.7;">
+                Your official attestation of participation is attached to this email. This document serves as a formal recognition of your attendance and contributions during the event.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Download button -->
+          <tr>
+            <td style="padding:0 32px 8px 32px;">
+              <a href="{{ download_url }}" style="display:inline-block;background:#6C47FF;color:#ffffff;font-weight:700;font-size:15px;text-decoration:none;padding:14px 28px;border-radius:12px;">
+                &#8659; Download Attestation
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:8px 32px 32px 32px;">
+              <p style="margin:0;font-size:12px;color:#9CA3AF;">PDF format. Link expires in 30 days.</p>
+            </td>
+          </tr>
+
+          <!-- Gradient bar -->
+          <tr>
+            <td style="height:5px;background:linear-gradient(90deg,#6C47FF,#8B5CF6,#06B6D4);font-size:0;line-height:0;">&nbsp;</td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding:24px 32px 12px 32px;text-align:center;">
+              <p style="margin:0;font-size:13px;color:#6B7280;">
+                If you have any questions regarding this document, please contact our support team.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0 32px 16px 32px;text-align:center;">
+              <table cellpadding="0" cellspacing="0" border="0" style="margin:0 auto;">
+                <tr>
+                  <td style="padding:0 16px;">
+                    <a href="#" style="font-size:13px;color:#6C47FF;text-decoration:none;font-weight:600;">eventora.com</a>
+                  </td>
+                  <td style="color:#E5E7EB;font-size:13px;">|</td>
+                  <td style="padding:0 16px;">
+                    <a href="#" style="font-size:13px;color:#6B7280;text-decoration:none;">Privacy Policy</a>
+                  </td>
+                  <td style="color:#E5E7EB;font-size:13px;">|</td>
+                  <td style="padding:0 16px;">
+                    <a href="#" style="font-size:13px;color:#6B7280;text-decoration:none;">Help Center</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0 32px;">
+              <div style="height:1px;background:#E5E7EB;font-size:0;line-height:0;">&nbsp;</div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:16px 32px 8px 32px;text-align:center;">
+              <p style="margin:0;font-size:11px;color:#9CA3AF;letter-spacing:0.06em;text-transform:uppercase;">&#169; {{ year }} EVENTORA INC. ALL RIGHTS RESERVED.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0 32px 24px 32px;text-align:center;">
+              <p style="margin:0;font-size:11px;color:#D1D5DB;letter-spacing:0.04em;text-transform:uppercase;">YOU RECEIVED THIS EMAIL BECAUSE YOU REGISTERED FOR AN EVENT VIA EVENTORA.</p>
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
