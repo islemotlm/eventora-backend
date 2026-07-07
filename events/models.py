@@ -1,12 +1,24 @@
+from decimal import Decimal
+
 from django.db import models
 from django.utils.text import slugify
 from django.conf import settings
 import uuid
 
 class Plan(models.Model):
+    CLIENT_SUBSCRIPTION_PRICES = {
+        'medium': Decimal('500.00'),
+        'premium': Decimal('2000.00'),
+        'pro': Decimal('3000.00'),
+    }
+
     name = models.CharField(max_length=50) # e.g., Medium, Premium, Pro
     price = models.DecimalField(max_digits=10, decimal_places=2)
     features = models.JSONField(default=dict)
+
+    def get_client_price(self):
+        normalized_name = (self.name or '').strip().lower()
+        return self.CLIENT_SUBSCRIPTION_PRICES.get(normalized_name, self.price)
 
     def __str__(self):
         return f"{self.name} - {self.price}"

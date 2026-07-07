@@ -200,7 +200,9 @@ class RegisterExhibitorStandView(APIView):
             return Response({'detail': 'Already registered as exhibitor.'}, status=status.HTTP_400_BAD_REQUEST)
 
         stand_type = request.data.get('stand_type')
-        if stand_type not in ('minimum', 'standard', 'premium'):
+        if stand_type == 'minimum':
+            stand_type = 'medium'
+        if stand_type not in ('medium', 'standard', 'premium'):
             return Response({'detail': 'Invalid stand type.'}, status=status.HTTP_400_BAD_REQUEST)
 
         company_name = request.data.get('company_name', '').strip()

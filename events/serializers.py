@@ -3,9 +3,14 @@ from .models import Event, Plan, ClientPayment
 from accounts.serializers import UserSerializer
 
 class PlanSerializer(serializers.ModelSerializer):
+    price = serializers.SerializerMethodField()
+
     class Meta:
         model = Plan
         fields = ['id', 'name', 'price', 'features']
+
+    def get_price(self, obj):
+        return str(obj.get_client_price())
 
 class ClientPaymentSerializer(serializers.ModelSerializer):
     client = UserSerializer(read_only=True)

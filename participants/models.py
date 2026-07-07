@@ -59,7 +59,7 @@ class Registration(models.Model):
 
 class ExhibitorStand(models.Model):
     STAND_TYPE_CHOICES = [
-        ('minimum', 'Minimum'),
+        ('medium', 'Medium'),
         ('standard', 'Standard'),
         ('premium', 'Premium'),
     ]
@@ -69,9 +69,10 @@ class ExhibitorStand(models.Model):
         ('rejected', 'Rejected'),
     ]
     STAND_PRICES = {
-        'minimum': 50000,
-        'standard': 100000,
-        'premium': 150000,
+        'medium': 2000,
+        'minimum': 2000,
+        'standard': 3500,
+        'premium': 4500,
     }
 
     event = models.ForeignKey('events.Event', on_delete=models.CASCADE, related_name='exhibitor_stands')
